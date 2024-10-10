@@ -40,6 +40,11 @@ def main():
                 print("Game Over")
                 pygame.quit()
                 return
+        for asteriod in asteroids_group:
+            for shot in shots:
+                if shot.check_collision(asteriod):
+                    asteriod.kill()
+                    shot.kill()
         pygame.display.flip()
         dt=fps.tick(60)/1000
 
