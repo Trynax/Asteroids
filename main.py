@@ -36,7 +36,11 @@ def main():
         for obj in drawable:
             obj.draw(screen)
 
-
+        for asteriod in asteroids_group:
+            if player.check_collision(asteriod):
+                print("Game Over")
+                pygame.quit()
+                return
         pygame.display.flip()
         dt=fps.tick(60)/1000
 
