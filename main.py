@@ -7,7 +7,6 @@ from shot import Shot
 
 
 def main():
-   
     pygame.init()
     updatable = pygame.sprite.Group()
     drawable = pygame.sprite.Group()
@@ -30,8 +29,6 @@ def main():
             if event.type==pygame.QUIT:
                 return
         screen.fill((0,0,0))
-
-
         for obj in updatable:
             obj.update(dt)
         
